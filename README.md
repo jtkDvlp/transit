@@ -1,5 +1,5 @@
-[![Clojars Project](https://img.shields.io/clojars/v/jtkdvlp/transit.svg)](https://clojars.org/jtkdvlp/transit)
-[![cljdoc badge](https://cljdoc.org/badge/jtkdvlp/transit)](https://cljdoc.org/d/jtkdvlp/transit/CURRENT)
+[![Clojars Project](https://img.shields.io/clojars/v/net.clojars.jtkdvlp/transit.svg)](https://clojars.org/net.clojars.jtkdvlp/transit)
+[![cljdoc badge](https://cljdoc.org/badge/net.clojars.jtkdvlp/transit)](https://cljdoc.org/d/net.clojars.jtkdvlp/transit/CURRENT)
 [![Clojure CI](https://github.com/jtkDvlp/transit/actions/workflows/clojure.yml/badge.svg)](https://github.com/jtkDvlp/transit/actions/workflows/clojure.yml)
 
 # jtk-dvlp.transit
@@ -16,7 +16,7 @@ Mini clj and cljs lib for common transit usage.
 ### Get it / add dependency
 
 Add the following dependency to your `project.clj`:<br>
-[![Clojars Project](https://img.shields.io/clojars/v/jtkdvlp/transit.svg)](https://clojars.org/jtkdvlp/transit)
+[![Clojars Project](https://img.shields.io/clojars/v/net.clojars.jtkdvlp/transit.svg)](https://clojars.org/net.clojars.jtkdvlp/transit)
 
 ### Usage
 
