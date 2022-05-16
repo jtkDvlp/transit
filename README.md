@@ -1,5 +1,6 @@
-[![Clojars Project](https://img.shields.io/clojars/v/jtk-dvlp/transit.svg)](https://clojars.org/jtk-dvlp/transit)
-[![cljdoc badge](https://cljdoc.org/badge/jtk-dvlp/transit)](https://cljdoc.org/d/jtk-dvlp/transit/CURRENT)
+[![Clojars Project](https://img.shields.io/clojars/v/jtkdvlp/transit.svg)](https://clojars.org/jtkdvlp/transit)
+[![cljdoc badge](https://cljdoc.org/badge/jtkdvlp/transit)](https://cljdoc.org/d/jtkdvlp/transit/CURRENT)
+[![Clojure CI](https://github.com/jtkDvlp/transit/actions/workflows/clojure.yml/badge.svg)](https://github.com/jtkDvlp/transit/actions/workflows/clojure.yml)
 
 # jtk-dvlp.transit
 
@@ -15,11 +16,11 @@ Mini clj and cljs lib for common transit usage.
 ### Get it / add dependency
 
 Add the following dependency to your `project.clj`:<br>
-[![Clojars Project](https://img.shields.io/clojars/v/jtk-dvlp/transit.svg)](https://clojars.org/{{prodicucuct-path}]})
+[![Clojars Project](https://img.shields.io/clojars/v/jtkdvlp/transit.svg)](https://clojars.org/jtkdvlp/transit)
 
 ### Usage
 
-See in repo [your-project.cljs](https://github.com/jtk-dvlp/transit/blob/master/dev/jtk_dvlp/your_project.cljs)
+See in repo [your-project.cljs](https://github.com/jtkdvlp/transit/blob/master/dev/jtk_dvlp/your_project.cljs)
 
 ```clojure
 (ns jtk-dvlp.your-project
