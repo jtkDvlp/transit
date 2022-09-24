@@ -21,19 +21,21 @@
   ^{:protect false}
   [:target-path]
 
+  :dependencies
+  [[org.clojure/clojure "1.10.0"]
+   [org.clojure/clojurescript "1.10.773"]
+
+   [com.cognitect/transit-clj "1.0.329"]
+   [clj-time "0.15.2"]
+
+   [com.cognitect/transit-cljs "0.8.269"]
+   [com.andrewmcveigh/cljs-time "0.5.2"]
+   ,,,]
+
   :profiles
   {:provided
    {:dependencies
-    [[org.clojure/clojure "1.10.0"]
-     [org.clojure/clojurescript "1.10.773"]
-
-     [re-frame "1.1.2"]
-
-     [com.cognitect/transit-clj "1.0.329"]
-     [clj-time "0.15.2"]
-
-     [com.cognitect/transit-cljs "0.8.269"]
-     [com.andrewmcveigh/cljs-time "0.5.2"]
+    [[re-frame "1.1.2"]
      ,,,]}
 
    :dev
