@@ -58,4 +58,15 @@
 
      }}}
 
+  :aliases
+  {"test@local"
+   ["do"
+    ["test"]
+    ["run" "-m" "figwheel.main" "-m" "jtk-dvlp.runner"]]
+
+   "test@github"
+   ["do"
+    ["test"]
+    ["run" "-m" "figwheel.main" "-co" "github.cljs.edn" "-m" "jtk-dvlp.runner"]]}
+
   ,,,)

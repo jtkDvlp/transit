@@ -13,27 +13,35 @@
    (fn [v] "clj-time")
    (fn [v] (time-coerce/to-date v))))
 
-(def ^:private write-handlers
+(def write-handlers
   {org.joda.time.DateTime CljTimeWriteHandler})
 
 (defn clj->transit
-  [clj]
-  (with-open [out (ByteArrayOutputStream. 4096)]
-    (-> out
-        (transit/writer :json {:handlers write-handlers})
-        (transit/write clj))
-    (.toString out)))
+  ([clj]
+   (clj->transit clj :json nil))
+
+  ([clj type opts]
+   (let [opts (merge {:handlers write-handlers} opts)]
+     (with-open [out (ByteArrayOutputStream. 4096)]
+       (-> out
+           (transit/writer type opts)
+           (transit/write clj))
+       (.toString out)))))
 
 (def ^:private CljTimeReadHandler
   (transit/read-handler
    (fn [v] (time-coerce/from-date v))))
 
-(def ^:private read-handlers
+(def read-handlers
   {"clj-time" CljTimeReadHandler})
 
 (defn transit->clj
-  [transit]
-  (with-open [in (ByteArrayInputStream. (.getBytes transit))]
-    (-> in
-        (transit/reader :json {:handlers read-handlers})
-        (transit/read))))
+  ([transit]
+   (transit->clj transit :json nil))
+
+  ([transit type opts]
+   (let [opts (merge {:handlers read-handlers} opts)]
+     (with-open [in (ByteArrayInputStream. (.getBytes transit))]
+       (-> in
+           (transit/reader type opts)
+           (transit/read))))))

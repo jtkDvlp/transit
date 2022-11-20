@@ -10,22 +10,26 @@
   (rep [_ v] (time-coerce/to-date v))
   (stringRep [_ v] nil))
 
-(def ^:private writer
-  (transit/writer
-   :json
-   {:handlers
-    {goog.date.UtcDateTime (CljTimeHandler.)}}))
+(def write-handlers
+  {goog.date.UtcDateTime (CljTimeHandler.)})
 
 (defn clj->transit
-  [clj]
-  (transit/write writer clj))
+  ([clj]
+   (clj->transit clj :json nil))
 
-(def ^:private reader
-  (transit/reader
-   :json
-   {:handlers
-    {"clj-time" time-coerce/from-date}}))
+  ([clj type opts]
+   (let [opts (merge {:handlers write-handlers} opts)]
+     (-> (transit/writer type opts)
+         (transit/write clj)))))
+
+(def read-handlers
+  {"clj-time" time-coerce/from-date})
 
 (defn transit->clj
-  [transit]
-  (transit/read reader transit))
+  ([transit]
+   (transit->clj transit :json nil))
+
+  ([transit type opts]
+   (let [opts (merge {:handlers read-handlers} opts)]
+     (-> (transit/reader type opts)
+         (transit/read transit)))))

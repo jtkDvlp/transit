@@ -9,5 +9,3 @@
   (t/is
     (let [clj-time (time/now)]
       (= (str clj-time) (str (sut/transit->clj (sut/clj->transit clj-time)))))))
-
-(t/run-tests)

@@ -12,8 +12,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Install dependencies
-      run: lein deps
-    - name: Run tests
-      run: lein test
+      - uses: actions/checkout@v3
+      - uses: browser-actions/setup-chrome@latest
+      - name: Install deps
+        run: lein deps
+      - name: Run tests
+        run: lein test@github
