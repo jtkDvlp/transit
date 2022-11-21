@@ -1,4 +1,4 @@
-(defproject net.clojars.jtkdvlp/transit "0.0.0-SNAPSHOT"
+(defproject net.clojars.jtkdvlp/transit "1.0.0"
   :description
   "Mini clj and cljs lib for common transit usage."
 
